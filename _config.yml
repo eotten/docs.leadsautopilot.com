@@ -1,0 +1,33 @@
+title: LeadsAutopilot Docs
+description: Your Resource for LinkedIn Automation
+url: "https://docs.leadsautopilot.com" # Production URL
+baseurl: ""
+permalink: pretty
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# SEO settings
+twitter:
+  username: leadsautopilot
+  card: summary_large_image
+logo: /assets/images/logo.png
+social:
+  name: LeadsAutopilot
+  links:
+    - https://twitter.com/leadsautopilot
+    - https://www.linkedin.com/company/leadsautopilot
+
+# Exclude from processing
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/
+  - README.md 

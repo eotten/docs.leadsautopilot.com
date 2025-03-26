@@ -1,0 +1,103 @@
+<div class="docs-sidebar">
+    <!-- Banner -->
+    <div class="mb-6">
+        <a href="https://app.leadsautopilot.com/join" target="_blank" class="block">
+            <img src="/assets/images/banner.gif" alt="Join LeadsAutopilot" class="w-full rounded-lg shadow-md">
+        </a>
+    </div>
+    
+    <!-- Documentation Navigation -->
+    <div class="mb-8">
+        <h3 class="text-xl font-bold mb-4 text-gray-800 dark:text-white">Documentation</h3>
+        <ul class="space-y-2">
+            <li>
+                <a href="{{ '/getting-started/' | relative_url }}" class="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 {% if page.url contains '/getting-started/' %}font-semibold text-blue-600 dark:text-blue-400{% endif %}">
+                    Getting Started
+                </a>
+            </li>
+            
+            <!-- Features Section -->
+            <li class="mt-4">
+                <h4 class="text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-2">Features</h4>
+                <ul class="pl-2 border-l-2 border-gray-200 dark:border-gray-700 space-y-2">
+                    <li>
+                        <a href="{{ '/features/autolikes' | relative_url }}" class="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 {% if page.url contains '/features/autolikes' %}font-semibold text-blue-600 dark:text-blue-400{% endif %}">
+                            Autolikes
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ '/features/powerwriter' | relative_url }}" class="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 {% if page.url contains '/features/powerwriter' %}font-semibold text-blue-600 dark:text-blue-400{% endif %}">
+                            Power Writer
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ '/features/content-scheduler' | relative_url }}" class="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 {% if page.url contains '/features/content-scheduler' %}font-semibold text-blue-600 dark:text-blue-400{% endif %}">
+                            Content Scheduler
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ '/features/comments' | relative_url }}" class="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 {% if page.url contains '/features/comments' %}font-semibold text-blue-600 dark:text-blue-400{% endif %}">
+                            Comments
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ '/features/welcome-messages' | relative_url }}" class="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 {% if page.url contains '/features/welcome-messages' %}font-semibold text-blue-600 dark:text-blue-400{% endif %}">
+                            Welcome Messages
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ '/features/auto-reposts' | relative_url }}" class="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 {% if page.url contains '/features/auto-reposts' %}font-semibold text-blue-600 dark:text-blue-400{% endif %}">
+                            Auto-Reposts
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            
+            <!-- API Section -->
+            <li class="mt-4">
+                <h4 class="text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-2">API</h4>
+                <ul class="pl-2 border-l-2 border-gray-200 dark:border-gray-700 space-y-2">
+                    <li>
+                        <a href="{{ '/api/getting-started' | relative_url }}" class="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 {% if page.url contains '/api/getting-started' %}font-semibold text-blue-600 dark:text-blue-400{% endif %}">
+                            API Getting Started
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ '/api/authentication' | relative_url }}" class="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 {% if page.url contains '/api/authentication' %}font-semibold text-blue-600 dark:text-blue-400{% endif %}">
+                            Authentication
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ '/api/endpoints' | relative_url }}" class="text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 {% if page.url contains '/api/endpoints' %}font-semibold text-blue-600 dark:text-blue-400{% endif %}">
+                            Endpoints
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    
+    <!-- On This Page -->
+    <div>
+        <h3 class="text-xl font-bold mb-4 text-gray-800 dark:text-white">On This Page</h3>
+        <div id="table-of-contents" class="mb-6"></div>
+    </div>
+    
+    <!-- Dark Mode Toggle -->
+    <div class="mt-8 pt-4 border-t border-gray-200 dark:border-gray-700">
+        <button id="dark-mode-toggle" class="flex items-center text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
+            <span class="dark:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                </svg>
+                Dark Mode
+            </span>
+            <span class="hidden dark:inline">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                </svg>
+                Light Mode
+            </span>
+        </button>
+    </div>
+</div> 

@@ -1,0 +1,139 @@
+---
+layout: default
+---
+
+<div class="flex flex-col md:flex-row min-h-screen">
+    <!-- Sidebar -->
+    <div class="w-full w-96 bg-white dark:bg-gray-800 border-r border-gray-200 dark:border-gray-700 p-6 overflow-y-auto">
+        {% include docs-sidebar.html %}
+    </div>
+
+    <!-- Main Content -->
+    <div class="flex-1 p-6 md:p-8 overflow-y-auto">
+        <div class="max-w-3xl mx-auto">
+            {{ content }}
+        </div>
+    </div>
+</div>
+
+<script>
+    // Dark mode toggle functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+        const html = document.documentElement;
+        
+        // Check for saved dark mode preference
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            html.classList.add('dark');
+        } else {
+            html.classList.remove('dark');
+        }
+        
+        // Toggle dark mode
+        darkModeToggle.addEventListener('click', function() {
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                localStorage.theme = 'light';
+            } else {
+                html.classList.add('dark');
+                localStorage.theme = 'dark';
+            }
+        });
+    });
+
+    // Table of contents generation
+    document.addEventListener('DOMContentLoaded', function() {
+        const toc = document.getElementById('table-of-contents');
+        const headings = document.querySelectorAll('.doc-content h2, .doc-content h3');
+        
+        if (headings.length > 0) {
+            let tocHtml = '<ul class="space-y-2">';
+            let currentLevel = 2;
+            
+            headings.forEach((heading, index) => {
+                const level = parseInt(heading.tagName[1]);
+                const id = heading.id || `heading-${index}`;
+                heading.id = id; // Ensure heading has an ID
+                
+                if (level > currentLevel) {
+                    tocHtml += '<ul class="pl-4 space-y-2">';
+                } else if (level < currentLevel) {
+                    tocHtml += '</ul>';
+                }
+                
+                currentLevel = level;
+                
+                tocHtml += `
+                    <li>
+                        <a href="#${id}" class="text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 text-sm">
+                            ${heading.textContent}
+                        </a>
+                    </li>
+                `;
+            });
+            
+            // Close any remaining open lists
+            while (currentLevel > 2) {
+                tocHtml += '</ul>';
+                currentLevel--;
+            }
+            
+            tocHtml += '</ul>';
+            toc.innerHTML = tocHtml;
+        }
+    });
+</script>
+
+<style>
+    /* Custom scrollbar for dark mode */
+    .dark ::-webkit-scrollbar {
+        width: 8px;
+    }
+    
+    .dark ::-webkit-scrollbar-track {
+        background: #1f2937;
+    }
+    
+    .dark ::-webkit-scrollbar-thumb {
+        background: #374151;
+        border-radius: 4px;
+    }
+    
+    .dark ::-webkit-scrollbar-thumb:hover {
+        background: #4b5563;
+    }
+    
+    /* Ensure proper spacing in the content area */
+    .doc-content {
+        @apply prose dark:prose-invert max-w-none;
+    }
+    
+    .doc-content h2 {
+        @apply text-2xl font-bold mt-8 mb-4;
+    }
+    
+    .doc-content h3 {
+        @apply text-xl font-semibold mt-6 mb-3;
+    }
+    
+    .doc-content p {
+        @apply mb-4;
+    }
+    
+    .doc-content ul, .doc-content ol {
+        @apply mb-4 pl-6;
+    }
+    
+    .doc-content li {
+        @apply mb-2;
+    }
+    
+    /* Ensure code blocks are properly styled */
+    .doc-content pre {
+        @apply bg-gray-100 dark:bg-gray-800 p-4 rounded-lg overflow-x-auto mb-4;
+    }
+    
+    .doc-content code {
+        @apply bg-gray-100 dark:bg-gray-800 px-1 py-0.5 rounded text-sm;
+    }
+</style> 

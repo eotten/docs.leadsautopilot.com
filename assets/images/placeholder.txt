@@ -1,0 +1,7 @@
+This directory should contain the following images:
+- leadsautopilot-pro-logo.png
+- logo.png
+- favicon.png
+- profile.jpg
+
+Please replace this file with the actual images for the documentation site.
