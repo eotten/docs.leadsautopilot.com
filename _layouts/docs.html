@@ -12,6 +12,34 @@ layout: default
     <div class="flex-1 p-6 md:p-8 overflow-y-auto">
         <div class="max-w-3xl mx-auto doc-content">
             {{ content }}
+
+            {% if page.feature %}
+            <!-- Feature Access Banner -->
+            <div class="mt-8 mb-8 bg-gradient-to-r from-indigo-600 to-blue-500 rounded-2xl shadow-lg overflow-hidden flex flex-col">
+                <div class="px-6 py-8 flex flex-col md:flex-row items-center justify-between">
+                    <div class="color-white mb-4 md:mb-0">
+                        <h3 class="text-xl font-bold" style="color: white;">Start using {{ page.feature_name }} today!</h3>
+                        <p class="text-blue-100">Log into your LeadsAutopilot dashboard to get started.</p>
+                    </div>
+                    <a href="https://app.leadsautopilot.com/" class="bg-white text-indigo-600 hover:bg-blue-50 px-6 py-3 rounded-2xl font-medium transition-colors duration-200 shadow-md">
+                        Visit Dashboard
+                    </a>
+                </div>
+            </div>
+
+            <!-- CTA Banner -->
+            <div class="mt-12 mb-4 bg-gradient-to-r from-green-500 to-blue-600 rounded-2xl shadow-lg overflow-hidden flex flex-col">
+                <div class="px-6 py-8 flex flex-col md:flex-row items-center justify-between">
+                    <div class="color-white mb-4 md:mb-0">
+                        <h3 class="text-xl font-bold" style="color: white;">Don't have an account yet?</h3>
+                        <p class="text-blue-100">Get access to all LeadsAutopilot features including {{ page.feature_name }} <b>FREE for 7 days.</b></p>
+                    </div>
+                    <a href="https://app.leadsautopilot.com/join" class="w-1/3 bg-white text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-2xl font-medium transition-colors duration-200 shadow-md">
+                        Start My Free Trial
+                    </a>
+                </div>
+            </div>
+            {% endif %}
         </div>
     </div>
 </div>

@@ -2,6 +2,8 @@
 layout: docs
 title: Content Scheduler - Automate Your LinkedIn Posting
 description: Learn how to use LeadsAutopilot's Content Scheduler to maintain a consistent LinkedIn presence with automated posting at optimal times.
+feature: true
+feature_name: Content Scheduler
 ---
 
 <h1 class="text-3xl font-bold mb-6 text-gray-900 dark:text-white">Content Scheduler 📅</h1>

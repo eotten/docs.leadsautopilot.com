@@ -2,6 +2,8 @@
 layout: docs
 title: Welcome Messages - Smart Network Growth
 description: Learn how to use LeadsAutopilot's Welcome Messages feature to automatically engage with new connections and start meaningful conversations.
+feature: true
+feature_name: Welcome Messages
 ---
 
 <h1 class="text-3xl font-bold mb-6 text-gray-900 dark:text-white">Welcome Messages 👋</h1>

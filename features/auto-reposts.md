@@ -2,6 +2,8 @@
 layout: docs
 title: Auto Reposts - Maximize Post Reach
 description: Learn how to use LeadsAutopilot's Auto Reposts feature to automatically republish your content and reach audiences in different time zones.
+feature: true
+feature_name: Auto Reposts
 ---
 
 <h1 class="text-3xl font-bold mb-6 text-gray-900 dark:text-white">Auto Reposts 🔄</h1>

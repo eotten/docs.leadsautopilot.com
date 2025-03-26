@@ -2,6 +2,8 @@
 layout: docs
 title: Autolikes - Automatic LinkedIn Post Liking
 description: Learn how to set up and use the Autolikes feature in LeadsAutopilot to automatically like posts from your target audience on LinkedIn.
+feature: true
+feature_name: AutoLikes
 ---
 
 <h1 class="text-3xl font-bold mb-6 text-gray-900 dark:text-white">Autolikes</h1>

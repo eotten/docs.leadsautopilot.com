@@ -2,6 +2,8 @@
 layout: docs
 title: Power Writer - AI-Powered LinkedIn Post Creation
 description: Learn how to use LeadsAutopilot's Power Writer to create engaging, high-performing LinkedIn posts that drive engagement and boost your professional brand.
+feature: true
+feature_name: Power Writer
 ---
 
 <h1 class="text-3xl font-bold mb-6 text-gray-900 dark:text-white">Power Writer ⚡</h1>

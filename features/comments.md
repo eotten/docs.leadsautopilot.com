@@ -2,6 +2,8 @@
 layout: docs
 title: Comments - Strategic LinkedIn Engagement
 description: Learn how to use LeadsAutopilot's Comments feature to strategically engage with key LinkedIn posts and boost your visibility and network.
+feature: true
+feature_name: Auto Comments
 ---
 
 <h1 class="text-3xl font-bold mb-6 text-gray-900 dark:text-white">Comments 💬</h1>
