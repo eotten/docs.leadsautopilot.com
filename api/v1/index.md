@@ -1,3 +1,9 @@
+---
+layout: docs
+title: API v1 Documentation
+description: Complete API v1 reference for LeadsAutopilot's automation features
+---
+
 # API Documentation v1
 
 Welcome to the Autopilot UI Nexus API v1 documentation.

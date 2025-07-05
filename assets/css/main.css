@@ -33,6 +33,14 @@ html {
 }
 
 /* Documentation specific styles */
+.doc-content h1 {
+    font-size: 2.25rem;
+    font-weight: 800;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    color: #111827;
+}
+
 .doc-content h2 {
     font-size: 1.75rem;
     font-weight: 700;
@@ -47,6 +55,45 @@ html {
     margin-top: 1.5rem;
     margin-bottom: 0.75rem;
     color: #1F2937;
+}
+
+.doc-content h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: #1F2937;
+}
+
+.doc-content h5 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    color: #374151;
+}
+
+.doc-content h6 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    color: #374151;
+}
+
+.doc-content a {
+    color: #3B82F6;
+    text-decoration: underline;
+    transition: color 0.2s ease-in-out;
+}
+
+.doc-content a:hover {
+    color: #1D4ED8;
+    text-decoration: underline;
+}
+
+.doc-content a:visited {
+    color: #7C3AED;
 }
 
 .doc-content p {
@@ -144,12 +191,40 @@ html {
 
 /* Dark mode overrides */
 @media (prefers-color-scheme: dark) {
+    .doc-content h1 {
+        color: #F9FAFB;
+    }
+    
     .doc-content h2 {
         color: #F9FAFB;
     }
     
     .doc-content h3 {
         color: #F3F4F6;
+    }
+    
+    .doc-content h4 {
+        color: #F3F4F6;
+    }
+    
+    .doc-content h5 {
+        color: #E5E7EB;
+    }
+    
+    .doc-content h6 {
+        color: #E5E7EB;
+    }
+    
+    .doc-content a {
+        color: #60A5FA;
+    }
+    
+    .doc-content a:hover {
+        color: #93C5FD;
+    }
+    
+    .doc-content a:visited {
+        color: #A78BFA;
     }
     
     .doc-content code {

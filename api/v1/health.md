@@ -1,3 +1,9 @@
+---
+layout: docs
+title: Health Check API
+description: Check the health and status of the API service
+---
+
 # Health Check Endpoint
 
 Check the health and status of the API service.

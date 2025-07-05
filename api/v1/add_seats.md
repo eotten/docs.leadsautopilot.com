@@ -1,3 +1,9 @@
+---
+layout: docs
+title: Add Seats API
+description: Create new LinkedIn automation seats with credentials and configuration
+---
+
 # Add Seats Endpoint
 
 Create a new LinkedIn automation seat with credentials and configuration.
