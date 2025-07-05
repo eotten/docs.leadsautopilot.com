@@ -34,66 +34,66 @@ html {
 
 /* Documentation specific styles */
 .doc-content h1 {
-    font-size: 2.25rem;
-    font-weight: 800;
-    margin-top: 2rem;
-    margin-bottom: 1.5rem;
-    color: #111827;
+    font-size: 2.25rem !important;
+    font-weight: 800 !important;
+    margin-top: 2rem !important;
+    margin-bottom: 1.5rem !important;
+    color: #111827 !important;
 }
 
 .doc-content h2 {
-    font-size: 1.75rem;
-    font-weight: 700;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-    color: #111827;
+    font-size: 1.75rem !important;
+    font-weight: 700 !important;
+    margin-top: 2rem !important;
+    margin-bottom: 1rem !important;
+    color: #111827 !important;
 }
 
 .doc-content h3 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-top: 1.5rem;
-    margin-bottom: 0.75rem;
-    color: #1F2937;
+    font-size: 1.5rem !important;
+    font-weight: 600 !important;
+    margin-top: 1.5rem !important;
+    margin-bottom: 0.75rem !important;
+    color: #1F2937 !important;
 }
 
 .doc-content h4 {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-top: 1.25rem;
-    margin-bottom: 0.75rem;
-    color: #1F2937;
+    font-size: 1.25rem !important;
+    font-weight: 600 !important;
+    margin-top: 1.25rem !important;
+    margin-bottom: 0.75rem !important;
+    color: #1F2937 !important;
 }
 
 .doc-content h5 {
-    font-size: 1.125rem;
-    font-weight: 600;
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
-    color: #374151;
+    font-size: 1.125rem !important;
+    font-weight: 600 !important;
+    margin-top: 1rem !important;
+    margin-bottom: 0.5rem !important;
+    color: #374151 !important;
 }
 
 .doc-content h6 {
-    font-size: 1rem;
-    font-weight: 600;
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
-    color: #374151;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    margin-top: 1rem !important;
+    margin-bottom: 0.5rem !important;
+    color: #374151 !important;
 }
 
 .doc-content a {
-    color: #3B82F6;
-    text-decoration: underline;
+    color: #3B82F6 !important;
+    text-decoration: underline !important;
     transition: color 0.2s ease-in-out;
 }
 
 .doc-content a:hover {
-    color: #1D4ED8;
-    text-decoration: underline;
+    color: #1D4ED8 !important;
+    text-decoration: underline !important;
 }
 
 .doc-content a:visited {
-    color: #7C3AED;
+    color: #7C3AED !important;
 }
 
 .doc-content p {
@@ -192,39 +192,39 @@ html {
 /* Dark mode overrides */
 @media (prefers-color-scheme: dark) {
     .doc-content h1 {
-        color: #F9FAFB;
+        color: #F9FAFB !important;
     }
     
     .doc-content h2 {
-        color: #F9FAFB;
+        color: #F9FAFB !important;
     }
     
     .doc-content h3 {
-        color: #F3F4F6;
+        color: #F3F4F6 !important;
     }
     
     .doc-content h4 {
-        color: #F3F4F6;
+        color: #F3F4F6 !important;
     }
     
     .doc-content h5 {
-        color: #E5E7EB;
+        color: #E5E7EB !important;
     }
     
     .doc-content h6 {
-        color: #E5E7EB;
+        color: #E5E7EB !important;
     }
     
     .doc-content a {
-        color: #60A5FA;
+        color: #60A5FA !important;
     }
     
     .doc-content a:hover {
-        color: #93C5FD;
+        color: #93C5FD !important;
     }
     
     .doc-content a:visited {
-        color: #A78BFA;
+        color: #A78BFA !important;
     }
     
     .doc-content code {
