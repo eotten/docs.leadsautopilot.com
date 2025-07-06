@@ -104,16 +104,29 @@
     @apply prose prose-lg max-w-none;
 }
 
+.doc-content h1,
+.doc-content h2,
+.doc-content h3,
+.doc-content h4,
+.doc-content h5,
+.doc-content h6 {
+    font-weight: bold;
+    margin: 10px 0;
+}
+
 .doc-content h1 {
     @apply text-4xl font-bold font-poppins text-gray-900 mb-6 !important;
+    font-size: 2rem;
 }
 
 .doc-content h2 {
     @apply text-3xl font-semibold font-poppins text-gray-800 mt-12 mb-6 !important;
+    font-size: 1.5rem;
 }
 
 .doc-content h3 {
     @apply text-2xl font-semibold font-poppins text-gray-800 mt-8 mb-4 !important;
+    font-size: 1.25rem;
 }
 
 .doc-content h4 {
@@ -150,14 +163,10 @@
 
 .doc-content pre {
     @apply bg-gray-900 text-gray-100 p-6 rounded-xl overflow-x-auto mb-6 shadow-lg !important;
-}
-
-.doc-content code {
-    @apply bg-gray-100 text-gray-900 px-2 py-1 rounded text-sm font-mono !important;
-}
-
-.doc-content pre code {
-    @apply bg-transparent text-gray-100 p-0 !important;
+    background-color: #0f172ae0 !important;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin: 10px 0;
 }
 
 .doc-content blockquote {
