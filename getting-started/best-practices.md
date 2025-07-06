@@ -99,7 +99,7 @@ description: Learn the best practices for using LeadsAutopilot safely and effect
 
     <div class="bg-yellow-50 dark:bg-yellow-900 p-4 rounded-lg my-4">
         <p class="text-yellow-800 dark:text-yellow-200">
-            <strong>Ready to implement these best practices?</strong> [Start your free trial](/signup) today and begin automating your LinkedIn presence safely and effectively.
+            <strong>Ready to implement these best practices?</strong> [Sign up](https://app.leadsautopilot.com/join) today and begin automating your LinkedIn presence safely and effectively.
         </p>
     </div>
 

@@ -2,166 +2,85 @@
 layout: default
 ---
 
-<div class="flex flex-col md:flex-row min-h-screen">
-    <!-- Sidebar -->
-    <div class="w-full w-96 bg-white dark:bg-gray-800 border-r border-gray-200 dark:border-gray-700 p-6 overflow-y-auto">
-        {% include docs-sidebar.html %}
-    </div>
-
-    <!-- Main Content -->
-    <div class="flex-1 p-6 md:p-8 overflow-y-auto">
-        <div class="max-w-3xl mx-auto doc-content">
-            {{ content }}
-
-            {% if page.feature %}
-            <!-- Feature Access Banner -->
-            <div class="mt-8 mb-8 bg-gradient-to-r from-indigo-600 to-blue-500 rounded-2xl shadow-lg overflow-hidden flex flex-col">
-                <div class="px-6 py-8 flex flex-col md:flex-row items-center justify-between">
-                    <div class="color-white mb-4 md:mb-0">
-                        <h3 class="text-xl font-bold" style="color: white;">Start using {{ page.feature_name }} today!</h3>
-                        <p class="text-blue-100">Log into your LeadsAutopilot dashboard to get started.</p>
+<div class="container mx-auto px-6 py-8">
+    <div class="max-w-7xl mx-auto">
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Sidebar -->
+            <aside class="lg:w-64 flex-shrink-0">
+                <div class="sticky top-24">
+                    <div class="card p-6 mb-6">
+                        <h3 class="font-semibold text-gray-800 mb-4">Navigation</h3>
+                        {% include docs-sidebar.html %}
                     </div>
-                    <a href="https://app.leadsautopilot.com/" class="bg-white text-indigo-600 hover:bg-blue-50 px-6 py-3 rounded-2xl font-medium transition-colors duration-200 shadow-md">
-                        Visit Dashboard
-                    </a>
-                </div>
-            </div>
-
-            <!-- CTA Banner -->
-            <div class="mt-12 mb-4 bg-gradient-to-r from-green-500 to-blue-600 rounded-2xl shadow-lg overflow-hidden flex flex-col">
-                <div class="px-6 py-8 flex flex-col md:flex-row items-center justify-between">
-                    <div class="color-white mb-4 md:mb-0">
-                        <h3 class="text-xl font-bold" style="color: white;">Don't have an account yet?</h3>
-                        <p class="text-blue-100">Get access to all LeadsAutopilot features including {{ page.feature_name }} <b>FREE for 7 days.</b></p>
+                    
+                    <!-- API Status Card -->
+                    <div class="card p-6 bg-gradient-to-br from-primary-50 to-accent-50">
+                        <div class="flex items-center justify-between mb-4">
+                            <h4 class="font-semibold text-gray-800">API Status</h4>
+                            <div class="status-indicator status-success"></div>
+                        </div>
+                        <p class="text-sm text-gray-600 mb-4">
+                            All systems operational
+                        </p>
+                        <a href="{{ '/api' | relative_url }}" class="text-primary-600 hover:text-primary-700 text-sm font-medium inline-flex items-center">
+                            View API Docs
+                            <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
                     </div>
-                    <a href="https://app.leadsautopilot.com/join" class="w-1/3 bg-white text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-2xl font-medium transition-colors duration-200 shadow-md">
-                        Start My Free Trial
-                    </a>
                 </div>
-            </div>
-            {% endif %}
+            </aside>
+            
+            <!-- Main Content -->
+            <main class="flex-1 min-w-0">
+                <div class="card p-8 md:p-12">
+                    <!-- Page Header -->
+                    <div class="mb-8">
+                        {% if page.title %}
+                            <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold font-poppins text-gray-900 leading-tight mb-4">{{ page.title }}</h1>
+                        {% endif %}
+                        {% if page.description %}
+                            <p class="text-base md:text-lg text-gray-700 leading-relaxed">{{ page.description }}</p>
+                        {% endif %}
+                    </div>
+                    
+                    <!-- Content -->
+                    <div class="doc-content">
+                        {{ content }}
+                    </div>
+                    
+                    <!-- Page Navigation -->
+                    <div class="mt-12 pt-8 border-t border-gray-200">
+                        <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
+                            <div class="flex items-center space-x-4">
+                                <span class="text-sm text-gray-600">Was this page helpful?</span>
+                                <div class="flex space-x-2">
+                                    <button class="text-primary-600 hover:text-primary-700 text-sm">👍 Yes</button>
+                                    <button class="text-gray-500 hover:text-gray-700 text-sm">👎 No</button>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <a href="https://github.com/leadsautopilot/docs" class="text-gray-500 hover:text-gray-700 text-sm inline-flex items-center">
+                                    <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                    Edit on GitHub
+                                </a>
+                                <a href="https://app.leadsautopilot.com/join" class="btn-primary btn-sm">
+                                    Try It Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
         </div>
     </div>
 </div>
 
-<script>
-    // Dark mode toggle functionality
-    document.addEventListener('DOMContentLoaded', function() {
-        const darkModeToggle = document.getElementById('dark-mode-toggle');
-        const html = document.documentElement;
-        
-        // Check for saved dark mode preference
-        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            html.classList.add('dark');
-        } else {
-            html.classList.remove('dark');
-        }
-        
-        // Toggle dark mode
-        darkModeToggle.addEventListener('click', function() {
-            if (html.classList.contains('dark')) {
-                html.classList.remove('dark');
-                localStorage.theme = 'light';
-            } else {
-                html.classList.add('dark');
-                localStorage.theme = 'dark';
-            }
-        });
-    });
-
-    // Table of contents generation
-    document.addEventListener('DOMContentLoaded', function() {
-        const toc = document.getElementById('table-of-contents');
-        const headings = document.querySelectorAll('.doc-content h2, .doc-content h3');
-        
-        if (headings.length > 0) {
-            let tocHtml = '<ul class="space-y-2">';
-            let currentLevel = 2;
-            
-            headings.forEach((heading, index) => {
-                const level = parseInt(heading.tagName[1]);
-                const id = heading.id || `heading-${index}`;
-                heading.id = id; // Ensure heading has an ID
-                
-                if (level > currentLevel) {
-                    tocHtml += '<ul class="pl-4 space-y-2">';
-                } else if (level < currentLevel) {
-                    tocHtml += '</ul>';
-                }
-                
-                currentLevel = level;
-                
-                tocHtml += `
-                    <li>
-                        <a href="#${id}" class="text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 text-sm">
-                            ${heading.textContent}
-                        </a>
-                    </li>
-                `;
-            });
-            
-            // Close any remaining open lists
-            while (currentLevel > 2) {
-                tocHtml += '</ul>';
-                currentLevel--;
-            }
-            
-            tocHtml += '</ul>';
-            toc.innerHTML = tocHtml;
-        }
-    });
-</script>
-
 <style>
-    /* Custom scrollbar for dark mode */
-    .dark ::-webkit-scrollbar {
-        width: 8px;
-    }
-    
-    .dark ::-webkit-scrollbar-track {
-        background: #1f2937;
-    }
-    
-    .dark ::-webkit-scrollbar-thumb {
-        background: #374151;
-        border-radius: 4px;
-    }
-    
-    .dark ::-webkit-scrollbar-thumb:hover {
-        background: #4b5563;
-    }
-    
-    /* Ensure proper spacing in the content area */
-    .doc-content {
-        @apply prose dark:prose-invert max-w-none;
-    }
-    
-    .doc-content h2 {
-        @apply text-2xl font-bold mt-8 mb-4;
-    }
-    
-    .doc-content h3 {
-        @apply text-xl font-semibold mt-6 mb-3;
-    }
-    
-    .doc-content p {
-        @apply mb-4;
-    }
-    
-    .doc-content ul, .doc-content ol {
-        @apply mb-4 pl-6;
-    }
-    
-    .doc-content li {
-        @apply mb-2;
-    }
-    
-    /* Ensure code blocks are properly styled */
-    .doc-content pre {
-        @apply bg-gray-100 dark:bg-gray-800 p-4 rounded-lg overflow-x-auto mb-4;
-    }
-    
-    .doc-content code {
-        @apply bg-gray-100 dark:bg-gray-800 px-1 py-0.5 rounded text-sm;
-    }
+.btn-sm {
+    @apply px-4 py-2 text-sm;
+}
 </style> 

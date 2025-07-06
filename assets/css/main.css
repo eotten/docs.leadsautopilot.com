@@ -1,251 +1,325 @@
-/* Custom scrollbar styles */
+/* Base styles and modern reset */
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-gradient: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+    --secondary-gradient: linear-gradient(135deg, #64748b 0%, #475569 100%);
+    --accent-gradient: linear-gradient(135deg, #dc26ff 0%, #c916ed 100%);
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.2);
+}
+
+/* Custom scrollbar */
 ::-webkit-scrollbar {
-    width: 6px;
+    width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: #f1f5f9;
     border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #4B5563;
+    background: var(--primary-gradient);
     border-radius: 10px;
+    border: 2px solid #f1f5f9;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #6B7280;
+    background: var(--secondary-gradient);
 }
 
-/* Smooth scrolling */
-html {
-    scroll-behavior: smooth;
+/* Glass morphism effect */
+.glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
 }
 
-/* Custom animations */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+/* Enhanced button styles */
+.btn-primary {
+    @apply px-8 py-4 bg-gradient-to-r from-primary-500 to-primary-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-glow focus:outline-none focus:ring-4 focus:ring-primary-200;
 }
 
-.animate-fadeIn {
-    animation: fadeIn 0.5s ease-in-out;
+.btn-secondary {
+    @apply px-8 py-4 bg-white text-primary-600 font-semibold rounded-xl border-2 border-primary-200 transition-all duration-300 transform hover:scale-105 hover:bg-primary-50 hover:border-primary-300 focus:outline-none focus:ring-4 focus:ring-primary-200;
+}
+
+.btn-accent {
+    @apply px-8 py-4 bg-gradient-to-r from-accent-500 to-accent-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-accent-200;
+}
+
+.docs-sidebar {
+    color: inherit;
+}
+
+/* Card components */
+.card {
+    @apply bg-white rounded-2xl shadow-lg border border-gray-100 transition-all duration-300 hover:shadow-xl hover:scale-105;
+}
+
+.card-feature {
+    @apply relative overflow-hidden;
+}
+
+.card-feature::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--primary-gradient);
+}
+
+/* Enhanced typography */
+.heading-xl {
+    @apply text-5xl md:text-6xl lg:text-7xl font-bold font-poppins text-gray-900 leading-tight;
+}
+
+.heading-lg {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold font-poppins text-gray-900 leading-tight;
+}
+
+.heading-md {
+    @apply text-2xl md:text-3xl font-semibold font-poppins text-gray-800 leading-tight;
+}
+
+.heading-sm {
+    @apply text-xl md:text-2xl font-semibold font-poppins text-gray-800 leading-tight;
+}
+
+.text-body {
+    @apply text-base md:text-lg text-gray-700 leading-relaxed;
+}
+
+.text-muted {
+    @apply text-sm md:text-base text-gray-600 leading-relaxed;
 }
 
 /* Documentation specific styles */
+.doc-content {
+    @apply prose prose-lg max-w-none;
+}
+
 .doc-content h1 {
-    font-size: 2.25rem !important;
-    font-weight: 800 !important;
-    margin-top: 2rem !important;
-    margin-bottom: 1.5rem !important;
-    color: #111827 !important;
+    @apply text-4xl font-bold font-poppins text-gray-900 mb-6 !important;
 }
 
 .doc-content h2 {
-    font-size: 1.75rem !important;
-    font-weight: 700 !important;
-    margin-top: 2rem !important;
-    margin-bottom: 1rem !important;
-    color: #111827 !important;
+    @apply text-3xl font-semibold font-poppins text-gray-800 mt-12 mb-6 !important;
 }
 
 .doc-content h3 {
-    font-size: 1.5rem !important;
-    font-weight: 600 !important;
-    margin-top: 1.5rem !important;
-    margin-bottom: 0.75rem !important;
-    color: #1F2937 !important;
+    @apply text-2xl font-semibold font-poppins text-gray-800 mt-8 mb-4 !important;
 }
 
 .doc-content h4 {
-    font-size: 1.25rem !important;
-    font-weight: 600 !important;
-    margin-top: 1.25rem !important;
-    margin-bottom: 0.75rem !important;
-    color: #1F2937 !important;
+    @apply text-xl font-semibold font-poppins text-gray-700 mt-6 mb-3 !important;
 }
 
 .doc-content h5 {
-    font-size: 1.125rem !important;
-    font-weight: 600 !important;
-    margin-top: 1rem !important;
-    margin-bottom: 0.5rem !important;
-    color: #374151 !important;
+    @apply text-lg font-semibold text-gray-700 mt-4 mb-2 !important;
 }
 
 .doc-content h6 {
-    font-size: 1rem !important;
-    font-weight: 600 !important;
-    margin-top: 1rem !important;
-    margin-bottom: 0.5rem !important;
-    color: #374151 !important;
-}
-
-.doc-content a {
-    color: #3B82F6 !important;
-    text-decoration: underline !important;
-    transition: color 0.2s ease-in-out;
-}
-
-.doc-content a:hover {
-    color: #1D4ED8 !important;
-    text-decoration: underline !important;
-}
-
-.doc-content a:visited {
-    color: #7C3AED !important;
+    @apply text-base font-semibold text-gray-700 mt-4 mb-2 !important;
 }
 
 .doc-content p {
-    margin-bottom: 1rem;
-    line-height: 1.7;
+    @apply text-gray-700 leading-relaxed mb-6 !important;
+}
+
+.doc-content a {
+    @apply text-primary-600 hover:text-primary-700 underline transition-colors duration-200 !important;
+}
+
+.doc-content a:visited {
+    @apply text-accent-600 !important;
 }
 
 .doc-content ul, .doc-content ol {
-    margin-bottom: 1rem;
-    padding-left: 1.5rem;
+    @apply mb-6 space-y-2 !important;
 }
 
-.doc-content ul li, .doc-content ol li {
-    margin-bottom: 0.5rem;
+.doc-content li {
+    @apply text-gray-700 leading-relaxed !important;
 }
 
 .doc-content pre {
-    background-color: #1F2937;
-    color: #F9FAFB;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    overflow-x: auto;
-    margin-bottom: 1.5rem;
+    @apply bg-gray-900 text-gray-100 p-6 rounded-xl overflow-x-auto mb-6 shadow-lg !important;
 }
 
 .doc-content code {
-    background-color: #F3F4F6;
-    padding: 0.25rem 0.5rem;
-    border-radius: 0.25rem;
-    font-family: monospace;
-    font-size: 0.875rem;
+    @apply bg-gray-100 text-gray-900 px-2 py-1 rounded text-sm font-mono !important;
 }
 
 .doc-content pre code {
-    background-color: transparent;
-    padding: 0;
+    @apply bg-transparent text-gray-100 p-0 !important;
 }
 
 .doc-content blockquote {
-    border-left: 4px solid #3B82F6;
-    padding-left: 1rem;
-    margin-left: 0;
-    margin-right: 0;
-    margin-bottom: 1.5rem;
-    font-style: italic;
-    color: #4B5563;
-}
-
-.doc-content img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 0.5rem;
-    margin-bottom: 1.5rem;
+    @apply border-l-4 border-primary-400 bg-primary-50 pl-6 py-4 my-6 italic rounded-r-lg !important;
+    color: #334155 !important;
 }
 
 .doc-content table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 1.5rem;
+    @apply w-full border-collapse bg-white rounded-lg overflow-hidden shadow-lg mb-6 !important;
 }
 
 .doc-content table th {
-    background-color: #F3F4F6;
-    padding: 0.75rem;
-    text-align: left;
-    font-weight: 600;
-    border-bottom: 2px solid #E5E7EB;
+    @apply bg-gray-50 px-6 py-4 text-left font-semibold text-gray-800 border-b border-gray-200 !important;
 }
 
 .doc-content table td {
-    padding: 0.75rem;
-    border-bottom: 1px solid #E5E7EB;
+    @apply px-6 py-4 border-b border-gray-200 text-gray-700 !important;
 }
 
 .doc-content table tr:hover {
-    background-color: #F9FAFB;
+    @apply bg-gray-50 !important;
 }
 
-/* Print styles */
-@media print {
-    header, footer, .no-print {
-        display: none;
+/* Integration-friendly components */
+.integration-badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-primary-100 text-primary-800 border border-primary-200;
+}
+
+.api-endpoint {
+    @apply bg-gray-900 text-gray-100 px-4 py-2 rounded-lg font-mono text-sm inline-block;
+}
+
+.status-indicator {
+    @apply w-3 h-3 rounded-full;
+}
+
+.status-success {
+    @apply bg-green-400;
+}
+
+.status-warning {
+    @apply bg-yellow-400;
+}
+
+.status-error {
+    @apply bg-red-400;
+}
+
+/* Enhanced animations */
+@keyframes shimmer {
+    0% { background-position: -200px 0; }
+    100% { background-position: calc(200px + 100%) 0; }
+}
+
+.shimmer {
+    background: linear-gradient(90deg, #f0f0f0 0px, #e0e0e0 40px, #f0f0f0 80px);
+    background-size: 200px;
+    animation: shimmer 1.5s infinite;
+}
+
+/* Responsive improvements */
+@media (max-width: 640px) {
+    .heading-xl {
+        @apply text-4xl;
     }
     
-    body {
-        font-size: 12pt;
+    .heading-lg {
+        @apply text-3xl;
     }
     
-    .doc-content {
-        width: 100%;
-        margin: 0;
-        padding: 0;
+    .btn-primary,
+    .btn-secondary,
+    .btn-accent {
+        @apply px-6 py-3 text-sm;
     }
 }
 
-/* Dark mode overrides */
-@media (prefers-color-scheme: dark) {
-    .doc-content h1 {
-        color: #F9FAFB !important;
-    }
-    
-    .doc-content h2 {
-        color: #F9FAFB !important;
-    }
-    
-    .doc-content h3 {
-        color: #F3F4F6 !important;
-    }
-    
-    .doc-content h4 {
-        color: #F3F4F6 !important;
-    }
-    
-    .doc-content h5 {
-        color: #E5E7EB !important;
-    }
-    
-    .doc-content h6 {
-        color: #E5E7EB !important;
-    }
-    
-    .doc-content a {
-        color: #60A5FA !important;
-    }
-    
-    .doc-content a:hover {
-        color: #93C5FD !important;
-    }
-    
-    .doc-content a:visited {
-        color: #A78BFA !important;
-    }
-    
-    .doc-content code {
-        background-color: #374151;
-        color: #F9FAFB;
-    }
-    
-    .doc-content blockquote {
-        color: #9CA3AF;
-    }
-    
-    .doc-content table th {
-        background-color: #374151;
-        border-bottom: 2px solid #4B5563;
-    }
-    
-    .doc-content table td {
-        border-bottom: 1px solid #4B5563;
-    }
-    
-    .doc-content table tr:hover {
-        background-color: #1F2937;
-    }
-} 
+/* Dark mode support */
+.dark .doc-content h1,
+.dark .doc-content h2,
+.dark .doc-content h3,
+.dark .doc-content h4,
+.dark .doc-content h5,
+.dark .doc-content h6 {
+    @apply text-white !important;
+}
+
+.dark .doc-content p,
+.dark .doc-content li {
+    @apply text-gray-300 !important;
+}
+
+.dark .doc-content a {
+    @apply text-primary-400 hover:text-primary-300 !important;
+}
+
+.dark .doc-content code {
+    @apply bg-gray-800 text-gray-200 !important;
+}
+
+.dark .doc-content blockquote {
+    @apply bg-gray-800 border-primary-500 !important;
+    color: #e2e8f0 !important;
+}
+
+/* Focus styles for accessibility */
+.focus-ring {
+    @apply focus:outline-none focus:ring-4 focus:ring-primary-200 focus:ring-opacity-50;
+}
+
+/* Loading states */
+.loading {
+    @apply opacity-50 pointer-events-none;
+}
+
+.skeleton {
+    @apply bg-gray-200 animate-pulse rounded;
+}
+
+/* Design overrides for readability and navigation layout */
+header.glass {
+    background-color: #0f172a !important; /* Dark background for better contrast */
+}
+header.glass nav,
+header.glass nav a,
+header.glass nav button,
+header.glass nav .btn-primary {
+    color: #ffffff !important; /* Ensure white text on dark nav */
+}
+header.glass nav a:hover,
+header.glass nav button:hover {
+    color: #38bdf8 !important; /* Subtle hover state */
+}
+header.glass nav { overflow: visible !important; }
+
+.docs-sidebar,
+.docs-sidebar a,
+.docs-sidebar h3,
+.docs-sidebar h4,
+.docs-sidebar li {
+    color: #334155 !important; /* Consistent sidebar text color */
+}
+
+.doc-content pre,
+.doc-content pre code {
+    color: #f8fafc !important; /* White text in code blocks */
+}
+
+/* Prevent dropdown clipping */
+.relative > div[style*="absolute"] {
+    overflow: visible !important; /* Ensure feature card dropdown is fully visible */
+}
+
+/* Ensure markdown list bullets/numbers appear */
+.doc-content ul {
+    list-style-type: disc !important;
+    list-style-position: inside !important;
+    padding-left: 1.25rem !important;
+}
+
+.doc-content ol {
+    list-style-type: decimal !important;
+    list-style-position: inside !important;
+    padding-left: 1.25rem !important;
+}

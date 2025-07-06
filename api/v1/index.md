@@ -6,12 +6,12 @@ description: Complete API v1 reference for LeadsAutopilot's automation features
 
 # API Documentation v1
 
-Welcome to the Autopilot UI Nexus API v1 documentation.
+Welcome to the LeadsAutopilot API v1 documentation.
 
 ## Base URL
 
 ```
-https://yourdomain.com/api/v1
+https://app.leadsautopilot.com/api/v1
 ```
 
 ## Authentication

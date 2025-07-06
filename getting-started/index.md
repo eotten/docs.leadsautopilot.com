@@ -94,17 +94,13 @@ description: Learn how to set up and get started with LeadsAutopilot to automate
     </p>
     <ul>
         <li><strong>Autolikes</strong> - Configure automatic post engagement</li>
-        <li><strong>Power Writer</strong> - Create optimized LinkedIn posts</li>
-        <li><strong>Content Scheduler</strong> - Schedule and automate posting</li>
-        <li><strong>Comments</strong> - Set up strategic commenting</li>
-        <li><strong>Welcome Messages</strong> - Automate new connection messages</li>
         <li><strong>Analytics</strong> - Track performance metrics</li>
         <li><strong>Settings</strong> - Manage your account and preferences</li>
     </ul>
     
     <h2 id="quick-start-guides">Quick Start Guides</h2>
     <p>
-        Ready to start using LeadsAutopilot? Here are quick guides to set up our most popular features:
+        Ready to start using LeadsAutopilot? Here's how to set up our Autolikes feature:
     </p>
     
     <h3>Setting Up Autolikes</h3>
@@ -118,19 +114,6 @@ description: Learn how to set up and get started with LeadsAutopilot to automate
     </ol>
     <p>
         <a href="{{ '/features/autolikes' | relative_url }}" class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300">Read the full Autolikes guide →</a>
-    </p>
-    
-    <h3>Creating Posts with Power Writer</h3>
-    <ol>
-        <li>Navigate to the <strong>Power Writer</strong> section</li>
-        <li>Select your LinkedIn seat (profile)</li>
-        <li>Draft your post in the editor</li>
-        <li>Click <strong>Optimize with AI</strong> to enhance your content</li>
-        <li>Review and edit the optimized post</li>
-        <li>Copy to clipboard and post on LinkedIn or send to Content Scheduler</li>
-    </ol>
-    <p>
-        <a href="{{ '/features/powerwriter' | relative_url }}" class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300">Read the full Power Writer guide →</a>
     </p>
     
     <h2 id="common-questions">Common Questions</h2>
@@ -170,13 +153,10 @@ description: Learn how to set up and get started with LeadsAutopilot to automate
     <div class="bg-green-50 dark:bg-green-900 p-4 rounded-lg my-6">
         <h3 class="font-semibold mb-2 text-green-800 dark:text-green-200">Ready to maximize your LinkedIn results?</h3>
         <p class="text-green-800 dark:text-green-200 mb-4">
-            Now that you're set up, explore our feature-specific guides to get the most out of LeadsAutopilot.
+            Now that you're set up, explore our Autolikes feature to get the most out of LeadsAutopilot.
         </p>
         <div class="flex flex-wrap gap-2">
             <a href="{{ '/features/autolikes' | relative_url }}" class="px-4 py-2 bg-white text-green-700 rounded-md hover:bg-green-50 dark:bg-gray-800 dark:text-green-300 dark:hover:bg-gray-700">Autolikes</a>
-            <a href="{{ '/features/powerwriter' | relative_url }}" class="px-4 py-2 bg-white text-green-700 rounded-md hover:bg-green-50 dark:bg-gray-800 dark:text-green-300 dark:hover:bg-gray-700">Power Writer</a>
-            <a href="{{ '/features/content-scheduler' | relative_url }}" class="px-4 py-2 bg-white text-green-700 rounded-md hover:bg-green-50 dark:bg-gray-800 dark:text-green-300 dark:hover:bg-gray-700">Content Scheduler</a>
-            <a href="{{ '/features/comments' | relative_url }}" class="px-4 py-2 bg-white text-green-700 rounded-md hover:bg-green-50 dark:bg-gray-800 dark:text-green-300 dark:hover:bg-gray-700">Comments</a>
         </div>
     </div>
 </div> 

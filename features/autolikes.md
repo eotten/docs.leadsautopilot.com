@@ -131,7 +131,7 @@ https://www.linkedin.com/search/results/content/?keywords=%22startup%20founder%2
     
     <h4>Stage 4: Connections → Clients</h4>
     <ul>
-        <li><strong>Value-first messaging</strong> - Use Welcome Messages to provide immediate value to new connections</li>
+        <li><strong>Value-first messaging</strong> - Provide immediate value to new connections through personalized outreach</li>
         <li><strong>Content upgrades</strong> - Offer exclusive resources or insights to your connections</li>
         <li><strong>Strategic CTAs</strong> - Include clear, low-friction calls to action in your communications</li>
         <li><strong>Nurture sequence</strong> - Implement a relationship-building message sequence for new connections</li>
